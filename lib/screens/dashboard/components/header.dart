@@ -24,14 +24,14 @@ class Header extends StatelessWidget {
             children: [
               Text(
                 "Hello, Deniz 👋",
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
               SizedBox(
                 height: 8,
               ),
               Text(
                 "Wellcome to your dashboard",
-                style: Theme.of(context).textTheme.subtitle2,
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ],
           ),

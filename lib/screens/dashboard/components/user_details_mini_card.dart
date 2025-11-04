@@ -48,7 +48,7 @@ class UserDetailsMiniCard extends StatelessWidget {
                     "$numberOfIncrease",
                     style: Theme.of(context)
                         .textTheme
-                        .caption!
+                        .bodyLarge!
                         .copyWith(color: Colors.white70),
                   ),
                 ],

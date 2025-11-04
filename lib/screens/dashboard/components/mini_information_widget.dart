@@ -52,7 +52,7 @@ class _MiniInformationWidgetState extends State<MiniInformationWidget> {
                 child: DropdownButton(
                   icon: Icon(Icons.more_vert, size: 18),
                   underline: SizedBox(),
-                  style: Theme.of(context).textTheme.button,
+                  style: Theme.of(context).textTheme.bodyLarge,
                   value: _value,
                   items: [
                     DropdownMenuItem(
@@ -110,14 +110,14 @@ class _MiniInformationWidgetState extends State<MiniInformationWidget> {
                 "${widget.dailyData.volumeData}",
                 style: Theme.of(context)
                     .textTheme
-                    .caption!
+                    .bodyLarge!
                     .copyWith(color: Colors.white70),
               ),
               Text(
                 widget.dailyData.totalStorage!,
                 style: Theme.of(context)
                     .textTheme
-                    .caption!
+                    .bodyLarge!
                     .copyWith(color: Colors.white),
               ),
             ],
@@ -148,17 +148,17 @@ class LineChartWidget extends StatelessWidget {
             LineChartData(
                 lineBarsData: [
                   LineChartBarData(
-                      spots: spotsData,
+                      spots: spotsData ?? [],
                       belowBarData: BarAreaData(show: false),
                       aboveBarData: BarAreaData(show: false),
                       isCurved: true,
                       dotData: FlDotData(show: false),
-                      colors: colors,
+                      color: colors?.first ?? Colors.transparent,
                       barWidth: 3),
                 ],
                 lineTouchData: LineTouchData(enabled: false),
                 titlesData: FlTitlesData(show: false),
-                axisTitleData: FlAxisTitleData(show: false),
+                // axisTitleData: FlAxisTitleData(show: false),
                 gridData: FlGridData(show: false),
                 borderData: FlBorderData(show: false)),
           ),
